@@ -671,7 +671,7 @@ static void mxt_report_input_data(struct mxt_data *data)
 			input_mt_report_slot_state(data->input_dev,
 					MT_TOOL_FINGER, true);
 			input_report_abs(data->input_dev, ABS_MT_POSITION_X,
-					data->fingers[i].x);
+					4095-data->fingers[i].x);
 			input_report_abs(data->input_dev, ABS_MT_POSITION_Y,
 					data->fingers[i].y);
 
